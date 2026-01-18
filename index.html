@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale Your Business Without the Overwhelm | Expert Virtual Assistants</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(83, 109, 254, 0.3) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.8; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: fadeInDown 0.8s ease;
+        }
+
+        h1 {
+            font-size: 3.8rem;
+            font-weight: 900;
+            margin-bottom: 25px;
+            line-height: 1.15;
+            animation: fadeInUp 0.8s ease;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 45px;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease;
+            line-height: 1.8;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            padding: 20px 55px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 45px rgba(102, 126, 234, 0.6);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .trust-bar {
+            background: #f8f9fa;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .trust-bar p {
+            color: #718096;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .services {
+            padding: 100px 20px;
+            background: #f8f9fa;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid #e2e8f0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #2d3748;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .trust-stat {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #667eea;
+        }
+
+        .trust-label {
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+
+        .pain-points {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #2d3748;
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #718096;
+            margin-bottom: 70px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .pain-card {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-color: #667eea;
+        }
+
+        .pain-card:hover::before {
+            width: 100%;
+            opacity: 0.05;
+        }
+
+        .pain-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .pain-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2d3748;
+            font-weight: 700;
+        }
+
+        .pain-card p {
+            color: #4a5568;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .solution {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+        }
+
+        .solution::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+        }
+
+        .solution .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .solution .section-title,
+        .solution .section-subtitle {
+            color: white;
+        }
+
+        .solution-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .solution-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 35px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .solution-card:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: scale(1.05);
+        }
+
+        .solution-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .solution-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .solution-card p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        .process {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .step {
+            text-align: center;
+            padding: 30px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 0 auto 25px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .step h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #2d3748;
+            font-weight: 700;
+        }
+
+        .step p {
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .cta-section {
+            padding: 100px 20px;
+            background: #1a202c;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .cta-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: 3.2rem;
+            margin-bottom: 25px;
+            font-weight: 900;
+            line-height: 1.2;
+        }
+
+        .cta-section p {
+            font-size: 1.35rem;
+            margin-bottom: 45px;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            padding: 20px 55px;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.15rem;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .cta-secondary:hover {
+            background: white;
+            color: #1a202c;
+            transform: translateY(-3px);
+        }
+
+        .guarantee {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .guarantee-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.05rem;
+        }
+
+        .guarantee-icon {
+            font-size: 1.5rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.15rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-primary, .cta-secondary {
+                width: 100%;
+                max-width: 320px;
+            }
+
+            .trust-logos {
+                gap: 30px;
+            }
+
+            .guarantee {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">✨ Trusted by 500+ Growing Entrepreneurs</div>
+            <h1>Scale Your Business<br>Without the Overwhelm</h1>
+            <p>Dedicated virtual assistant support that helps overwhelmed entrepreneurs save time, streamline operations, and grow sustainably.</p>
+            <a href="https://www.schedulingbuddy.ai/" class="cta-primary">Schedule Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <p>Empowering Entrepreneurs to Scale Smarter</p>
+            <div class="trust-logos">
+                <div>
+                    <div class="trust-stat">20+</div>
+                    <div class="trust-label">Hours Saved Weekly</div>
+                </div>
+                <div>
+                    <div class="trust-stat">98%</div>
+                    <div class="trust-label">Client Retention</div>
+                </div>
+                <div>
+                    <div class="trust-stat">48hr</div>
+                    <div class="trust-label">Onboarding Time</div>
+                </div>
+            </div>
+            <p style="font-size: 0.85rem; opacity: 0.6; margin-top: 10px;">Sample performance metrics based on typical client outcomes</p>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="pain-points">
+        <div class="container">
+            <h2 class="section-title">You're Ready to Scale,<br>But These Roadblocks Keep Holding You Back</h2>
+            <p class="section-subtitle">Sound familiar? You're not alone. These are the exact challenges our clients faced before partnering with us.</p>
+            
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <span class="pain-icon">⏰</span>
+                    <h3>Trapped in the Daily Grind</h3>
+                    <p>You're spending 15+ hours a week on admin tasks, emails, and scheduling instead of closing deals and strategic planning. Your business growth has stalled because you're stuck in the weeds.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <span class="pain-icon">🚫</span>
+                    <h3>Bottleneck to Growth</h3>
+                    <p>Everything runs through you. You can't take on more clients because you're already maxed out. Your business is limited by the hours in your day.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <span class="pain-icon">💸</span>
+                    <h3>Opportunities Slipping Away</h3>
+                    <p>Late follow-ups, missed proposals, and forgotten leads are costing you thousands each month. You know there's money on the table but you can't keep up.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <span class="pain-icon">😰</span>
+                    <h3>Constant Overwhelm & Burnout</h3>
+                    <p>Working nights and weekends just to stay afloat. The work-life balance you dreamed of as an entrepreneur feels impossible. You're exhausted.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <span class="pain-icon">🔄</span>
+                    <h3>No Systems or Processes</h3>
+                    <p>Everything lives in your head. You know you need to delegate but don't have time to train someone or document processes. It feels easier to just do it yourself.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <span class="pain-icon">❌</span>
+                    <h3>Past Hires Haven't Worked</h3>
+                    <p>You've tried freelancers or VAs before but they didn't understand your business, needed constant oversight, or dropped the ball. You ended up doing more work, not less.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">What We Take Off Your Plate</h2>
+            <p class="section-subtitle">The time-consuming tasks that keep you from focusing on growth</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">📧</span>
+                    <h3>Email & Inbox Management</h3>
+                    <p>We filter, prioritize, and respond to emails so you only see what matters most. Your inbox becomes a productive tool, not a time drain.</p>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">📅</span>
+                    <h3>Calendar & Scheduling</h3>
+                    <p>From coordinating meetings to managing time blocks, we ensure your calendar works for you, not against you.</p>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">🤝</span>
+                    <h3>Client Follow-Ups</h3>
+                    <p>Never lose a deal to poor follow-up again. We track leads, send timely check-ins, and keep opportunities moving forward.</p>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">📊</span>
+                    <h3>Data Entry & Reporting</h3>
+                    <p>Accurate data entry and organized reporting that gives you insights without the tedious manual work.</p>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">💼</span>
+                    <h3>CRM Updates & Admin Support</h3>
+                    <p>Keep your systems current and organized. From updating contact records to managing workflows, we handle the backend.</p>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">⚙️</span>
+                    <h3>Custom Task Support</h3>
+                    <p>Every business is unique. We adapt to your specific needs and handle whatever recurring tasks slow you down.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <div class="solution-content">
+                <h2 class="section-title">Imagine Your Business Running<br>Smoothly Without You</h2>
+                <p class="section-subtitle">This is what's possible when you have the right virtual assistant partner</p>
+                
+                <div class="solution-grid">
+                    <div class="solution-card">
+                        <span class="solution-icon">🎯</span>
+                        <h3>Strategic Focus</h3>
+                        <p>Dedicate 80% of your time to revenue-generating activities and high-level strategy</p>
+                    </div>
+                    
+                    <div class="solution-card">
+                        <span class="solution-icon">📈</span>
+                        <h3>Scalable Growth</h3>
+                        <p>Take on 2-3x more clients without working longer hours or sacrificing quality</p>
+                    </div>
+                    
+                    <div class="solution-card">
+                        <span class="solution-icon">⚡</span>
+                        <h3>Lightning Response</h3>
+                        <p>Never miss another opportunity with same-day responses and proactive follow-ups</p>
+                    </div>
+                    
+                    <div class="solution-card">
+                        <span class="solution-icon">🧘</span>
+                        <h3>True Freedom</h3>
+                        <p>Take vacations and disconnect knowing your business operations continue seamlessly</p>
+                    </div>
+                    
+                    <div class="solution-card">
+                        <span class="solution-icon">💎</span>
+                        <h3>Professional Excellence</h3>
+                        <p>Get experienced VAs who understand entrepreneurship and deliver exceptional work</p>
+                    </div>
+                    
+                    <div class="solution-card">
+                        <span class="solution-icon">🔧</span>
+                        <h3>Systems Built for You</h3>
+                        <p>We document and optimize your processes so your business runs like a well-oiled machine</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title">From Overwhelmed to Optimized in 3 Simple Steps</h2>
+            <p class="section-subtitle">We make it ridiculously easy to get started and see results fast</p>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Strategy Call</h3>
+                    <p>We dive deep into your business challenges, goals, and what success looks like for you. No sales pitch—just strategic clarity on how we can help.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Seamless Onboarding</h3>
+                    <p>Within 48 hours, you're matched with your dedicated VA and we begin documenting your key processes. You'll start delegating tasks immediately.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Scale & Optimize</h3>
+                    <p>Watch your freed-up time compound as we refine systems, anticipate needs, and proactively solve problems. You focus on growth while we handle execution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Ready to Break Through Your<br>Growth Ceiling?</h2>
+            <p>Join hundreds of entrepreneurs who've reclaimed their time and scaled their businesses without burning out.</p>
+            <div class="cta-buttons">
+                <a href="https://www.schedulingbuddy.ai/" class="cta-primary">Schedule Free Consultation</a>
+                <a href="#contact" class="cta-secondary">View Our Services</a>
+            </div>
+            <div class="guarantee">
+                <div class="guarantee-item">
+                    <span class="guarantee-icon">✓</span>
+                    <span>No Credit Card Required</span>
+                </div>
+                <div class="guarantee-item">
+                    <span class="guarantee-icon">✓</span>
+                    <span>Risk-Free Onboarding</span>
+                </div>
+                <div class="guarantee-item">
+                    <span class="guarantee-icon">✓</span>
+                    <span>Cancel Anytime During Your First 30 Days</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
